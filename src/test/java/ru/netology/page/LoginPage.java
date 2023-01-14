@@ -33,10 +33,9 @@ public class LoginPage {
         return new VerificationPage();
     }
 
-    public VerificationPage invalidLogin(DataHelper.AuthInfo info) {
+    public void invalidLogin(DataHelper.AuthInfo info) {
         loginField.setValue(info.getLogin());
         passwordField.setValue(info.getPassword());
         loginButton.click();
-        return null;
     }
 }
