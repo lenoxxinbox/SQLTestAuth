@@ -42,7 +42,6 @@ public class AuthTest {
     void shouldAuthWithInvalidCode() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var verificationPage = loginPage.validLogin(DataHelper.getAuthInfo());
-        verificationPage.invalidVerify();
-        loginPage.verifyErrorNotificationVisiblity("Ошибка! Неверно указан код! Попробуйте еще раз.");
+        verificationPage.invalidVerify("Неверно указан код! Попробуйте ещё раз.");
     }
 }
