@@ -27,9 +27,7 @@ public class LoginPage {
     }
 
     public VerificationPage validLogin(DataHelper.AuthInfo info) {
-        loginField.setValue(info.getLogin());
-        passwordField.setValue(info.getPassword());
-        loginButton.click();
+        invalidLogin(info);
         return new VerificationPage();
     }
 
